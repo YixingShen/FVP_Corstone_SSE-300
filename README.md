@@ -32,8 +32,8 @@ qemu-system-arm -machine mps2-an521 -cpu cortex-m33 ^
 
 //QEMU Run ARM MPS2 AN521, No BL2
 qemu-system-arm -machine mps2-an521 -cpu cortex-m33 ^
--device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x00000000 ^
--device loader,file="cmakebuild/bin/tfm_ns.bin",addr=0x10080000
+-device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x10000000 ^
+-device loader,file="cmakebuild/bin/tfm_ns.bin",addr=0x00080000
 -serial stdio
 ```
 
@@ -46,8 +46,8 @@ qemu-system-arm -machine mps3-an547 -cpu cortex-m55 ^
 
 //QEMU Run ARM MPS3 AN547, No BL2
 qemu-system-arm -machine mps3-an547 -cpu cortex-m55 ^
--device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x00000000 ^
+-device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x10000000 ^
 -device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x11000000 ^
--device loader,file="cmakebuild/bin/tfm_ns.bin",addr=0x11060000 ^
+-device loader,file="cmakebuild/bin/tfm_ns.bin",addr=0x01060000 ^
 -serial stdio
 ```
