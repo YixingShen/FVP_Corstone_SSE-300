@@ -9,6 +9,7 @@ FVP_Corstone_SSE-300_Ethos-U55 ^
 --parameter mps3_board.sse300.VM_BANK_SIZE=2048 ^
 -a cpu0*="cmakebuild/bin/bl2.axf" ^
 --data "cmakebuild/bin/tfm_s_ns_signed.bin"@0x11000000
+
 //FVP Run ARM MPS3 AN552, No BL2
 FVP_Corstone_SSE-300_Ethos-U55 ^
 --parameter mps3_board.DISABLE_GATING=1 ^
@@ -27,6 +28,7 @@ qemu-system-arm -machine mps2-an521 -cpu cortex-m33 ^
 -kernel cmakebuild/bin/bl2.elf ^
 -device loader,file="cmakebuild/bin/tfm_s_ns_signed.bin",addr=0x10080000 ^
 -serial stdio
+
 //QEMU Run ARM MPS2 AN521, No BL2
 qemu-system-arm -machine mps2-an521 -cpu cortex-m33 ^
 -device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x00000000 ^
@@ -40,6 +42,7 @@ qemu-system-arm -machine mps3-an547 -cpu cortex-m55 ^
 -kernel cmakebuild/bin/bl2.elf ^
 -device loader,file="cmakebuild/bin/tfm_s_ns_signed.bin",addr=0x11000000 ^
 -serial stdio
+
 //QEMU Run ARM MPS3 AN547, No BL2
 qemu-system-arm -machine mps3-an547 -cpu cortex-m55 ^
 -device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x00000000 ^
