@@ -22,12 +22,12 @@ FVP_Corstone_SSE-300_Ethos-U55 ^
 ```
 
 ```
-//QEMU Run ARM MPS3 AN521
+//QEMU Run ARM MPS2 AN521
 qemu-system-arm -machine mps2-an521 -cpu cortex-m33 ^
 -kernel cmakebuild/bin/bl2.elf ^
 -device loader,file="cmakebuild/bin/tfm_s_ns_signed.bin",addr=0x10080000 ^
 -serial stdio
-//QEMU Run ARM MPS3 AN521, No BL2
+//QEMU Run ARM MPS2 AN521, No BL2
 qemu-system-arm -machine mps2-an521 -cpu cortex-m33 ^
 -device loader,file="cmakebuild/bin/tfm_s.bin",addr=0x00000000 ^
 -device loader,file="cmakebuild/bin/tfm_ns.bin",addr=0x10080000
